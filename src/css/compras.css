@@ -1,0 +1,60 @@
+/* compras.css */
+.compras-container {
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .compras-container h2 {
+    color: #2e7d32; /* Verde oscuro */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .list-group-item {
+    border-left: 4px solid #81c784; /* Verde suave */
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .btn-outline-primary {
+    border-color: #2e7d32;
+    color: #2e7d32;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #2e7d32;
+    color: white;
+  }
+  
+  .modal-header {
+    background-color: #43a047; /* Verde medio */
+    color: white;
+  }
+  
+  .modal-footer .btn-success {
+    background-color: #388e3c;
+    border: none;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+    border: none;
+  }
+  
+  @media (max-width: 768px) {
+    .compras-container {
+      padding: 10px;
+    }
+  
+    .list-group-item {
+      font-size: 0.9rem;
+    }
+  
+    .modal-content {
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  }
+  

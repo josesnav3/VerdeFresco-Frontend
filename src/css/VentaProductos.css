@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    background-color: #f1f8e9;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .contenedor-productos {
+    padding: 10px;
+  }
+  
+  .titulo {
+    color: #2e7d32;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .productos-grid-xs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .producto-mini {
+    background-color: #fff;
+    border: 1px solid #c8e6c9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 128, 0, 0.08);
+  }
+  
+  .img-mini {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .info-mini {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .precio-mini {
+    color: #ef6c00;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .info-mini button {
+    align-self: flex-start;
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    background-color: #66bb6a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .info-mini button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* ================== */
+  /* Estilos del carrito */
+  /* ================== */
+  
+  .btn-outline-success {
+    font-weight: bold;
+    border-color: #66bb6a;
+    color: #388e3c;
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #66bb6a;
+    color: white;
+  }
+  
+  .modal-header, .modal-footer {
+    background-color: #e8f5e9;
+  }
+  
+  .modal-body {
+    background-color: #ffffff;
+  }
+  
+  .list-group-item {
+    border: none;
+    border-bottom: 1px solid #c8e6c9;
+  }
+  
+  .list-group-item:last-child {
+    border-bottom: none;
+  }
+  
+  .modal-title {
+    font-weight: bold;
+    color: #2e7d32;
+  }
+
+  .alert {
+    font-weight: bold;
+    background-color: #c8e6c9;
+    border-color: #81c784;
+    color: #2e7d32;
+  }
+  
+  

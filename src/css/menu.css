@@ -1,0 +1,13 @@
+.navbar.fixed-bottom {
+    height: 60px;
+    font-size: 14px;
+  }
+  
+  .navbar.fixed-bottom i {
+    font-size: 18px;
+  }
+  
+  .navbar.fixed-bottom small {
+    font-size: 11px;
+  }
+  
