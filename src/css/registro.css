@@ -1,118 +1,81 @@
 body {
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background-color: #f1f8e9;
-    color: #2e7d32;
+  background-color: #f4f8fb;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.card {
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+input.form-control {
+  padding: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.btn {
+  font-weight: 600;
+}
+
+.modal-content {
+  border-radius: 12px;
+  text-align: center;
+}
+
+.card-body p {
+  margin-bottom: 0.4rem;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  max-width: 360px;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.modal button {
+  font-weight: 600;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+@media (max-width: 400px) {
+  .modal {
+    padding: 20px 16px;
   }
-  
-  .registro-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 20px 80px;
-    min-height: 100vh;
+
+  .modal img {
+    width: 150px;
   }
-  
-  .registro-form-container {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .registro-form-container h2 {
-    text-align: center;
-    color: #2e7d32;
-    margin-bottom: 20px;
-  }
-  
-  form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #c8e6c9;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  form input:focus {
-    border-color: #66bb6a;
-    outline: none;
-  }
-  
-  form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #ff9800;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  form button:hover {
-    background-color: #f57c00;
-  }
-  
-  .registro-error {
-    margin-top: 10px;
-    color: red;
-    text-align: center;
-    font-size: 14px;
-  }
-  
-  /* Modal styles */
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 128, 0, 0.2);
-    backdrop-filter: blur(3px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-  }
-  
-  .modal-box {
-    background: white;
-    border-radius: 10px;
-    padding: 25px;
-    text-align: center;
-    max-width: 300px;
-    width: 90%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  .modal-box h3 {
-    color: #2e7d32;
-    margin-bottom: 10px;
-  }
-  
-  .modal-box p {
-    margin-bottom: 20px;
-    color: #444;
-  }
-  
-  .modal-box button {
-    padding: 10px 20px;
-    background-color: #66bb6a;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .modal-box button:hover {
-    background-color: #43a047;
-  }
-  
+}

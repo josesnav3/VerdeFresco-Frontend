@@ -1,63 +1,177 @@
-.dashboard-container {
-    padding: 20px;
-    background-color: #f1f8e9;
-    min-height: 100vh;
-    font-family: 'Segoe UI', sans-serif;
+/* AÍSLALO: todo bajo .vf-dashboard para no afectar otros JSX */
+.vf-dashboard.dashboard-container {
+  padding: 14px;
+  background: linear-gradient(180deg, #fff8e1 0%, #fef6ec 18%, #f1f8e9 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Propuesta de LOGO (wordmark tipográfico) arriba ===== */
+.vf-dashboard .brand-proposal {
+  display: grid;
+  place-items: center;
+  padding: 8px 12px 2px;
+  margin-bottom: 10px;
+}
+
+.vf-dashboard .brand-proposal .wordmark {
+  font-size: clamp(20px, 4.6vw, 32px);
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  line-height: 1;
+  background: linear-gradient(90deg, #ff8a00 0%, #ffa726 30%, #66bb6a 70%, #2e7d32 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+/* Acento en la V con un “tallo/hoja” sutil */
+.vf-dashboard .brand-proposal .wordmark::first-letter {
+  color: #2e7d32;
+  -webkit-text-stroke: 1px rgba(46,125,50,0.15);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+}
+
+.vf-dashboard .brand-proposal .tag {
+  margin-top: 2px;
+  font-size: 12px;
+  color: #6d4c41;
+  opacity: 0.85;
+}
+
+/* ===== Header con logo original (se mantiene) ===== */
+.vf-dashboard .dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background:
+    radial-gradient(900px 180px at 20% -60%, rgba(255,138,0,0.18), transparent 60%),
+    radial-gradient(700px 140px at 85% -70%, rgba(46,125,50,0.16), transparent 60%),
+    linear-gradient(90deg, #fff3e0 0%, #fff8e1 40%, #f1f8e9 100%);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* Marca (logo + texto) */
+.vf-dashboard .brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vf-dashboard .vf-logo {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(60% 60% at 30% 30%, #ffffff 0%, #ffe8c2 65%, #ffd699 100%);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,0.6),
+    0 5px 14px rgba(255,138,0,0.18);
+}
+
+.vf-dashboard .vf-logo svg {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.vf-dashboard .brand-text h1 {
+  font-size: 1.15rem;
+  line-height: 1.05;
+  margin: 0;
+  color: #2e7d32;
+  letter-spacing: 0.3px;
+  font-weight: 800;
+}
+
+.vf-dashboard .brand-text .tagline {
+  margin: 1px 0 0;
+  font-size: 0.8rem;
+  color: #6d4c41;
+  opacity: 0.85;
+}
+
+/* Icono de usuario (si lo usas en el header) */
+.vf-dashboard .user-icon i {
+  font-size: 40px;
+  color: #2e7d32;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+}
+
+/* ===== Grid principal compacto ===== */
+.vf-dashboard .dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 12px;
+}
+
+/* Tarjetas del grid con acentos cálidos */
+.vf-dashboard .grid-item {
+  background: #ffffff;
+  border: 1px solid #ffe0b2;
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #2e7d32;
+  box-shadow: 0 3px 10px rgba(255,138,0,0.10);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+  min-height: 86px; /* compacta la altura */
+}
+
+.vf-dashboard .grid-item:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(180deg, #fffaf3, #fff);
+  border-color: #ffcc80;
+  box-shadow: 0 6px 16px rgba(255,138,0,0.16);
+}
+
+/* === ICONOS MÁS PEQUEÑOS === */
+.vf-dashboard .grid-item i {
+  font-size: 18px;              /* ↓ antes 24px */
+  margin-bottom: 6px;           /* ↓ */
+  display: block;
+  color: #ff8a00;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+}
+
+/* Texto compacto */
+.vf-dashboard .grid-item span {
+  font-size: 13px;              /* ↓ antes 14px */
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+/* Extras heredados */
+.vf-dashboard .dashboard-header h4 {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.vf-dashboard .saldo {
+  color: #ef6c00;
+  font-weight: bold;
+}
+
+/* Responsive fino */
+@media (max-width: 380px) {
+  .vf-dashboard .grid-item {
+    padding: 10px 8px;
+    min-height: 80px;
   }
-  
-  .dashboard-header {
-    text-align: center;
-    margin-bottom: 30px;
+  .vf-dashboard .grid-item i {
+    font-size: 17px;
+    margin-bottom: 4px;
   }
-  
-  .user-icon i {
-    font-size: 50px;
-    color: #2e7d32;
+  .vf-dashboard .grid-item span {
+    font-size: 12.5px;
   }
-  
-  .dashboard-header h4 {
-    margin-top: 10px;
-    font-weight: bold;
-    color: #388e3c;
-  }
-  
-  .saldo {
-    color: #ef6c00;
-    font-weight: bold;
-  }
-  
-  .dashboard-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-    gap: 15px;
-  }
-  
-  .grid-item {
-    background-color: white;
-    border: 1px solid #c8e6c9;
-    border-radius: 12px;
-    padding: 15px;
-    text-align: center;
-    text-decoration: none;
-    color: #2e7d32;
-    box-shadow: 0 4px 8px rgba(0,128,0,0.08);
-    transition: transform 0.2s ease;
-  }
-  
-  .grid-item:hover {
-    transform: translateY(-4px);
-    background-color: #f0fdf4;
-  }
-  
-  .grid-item i {
-    font-size: 24px;
-    margin-bottom: 8px;
-    display: block;
-    color: #4caf50;
-  }
-  
-  .grid-item span {
-    font-size: 14px;
-    font-weight: 500;
-  }
-  
+}

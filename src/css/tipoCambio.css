@@ -1,0 +1,39 @@
+/* src/pages/TipoCambio.css */
+.tipo-cambio-container {
+  background: linear-gradient(to bottom, #f8fff0, #ffffff);
+  border-radius: 20px;
+  padding: 40px 20px;
+  border: 2px solid #c2f0b1;
+}
+
+.logo-verdefresco img {
+  width: 150px;
+  height: auto;
+}
+
+.titulo-verdefresco {
+  color: #388e3c;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.tipo-card {
+  background-color: #e9fce5;
+  border-left: 5px solid #43a047;
+  transition: transform 0.3s ease;
+}
+
+.tipo-card.venta {
+  background-color: #fff3e0;
+  border-left-color: #fb8c00;
+}
+
+.tipo-card:hover {
+  transform: scale(1.03);
+}
+
+.valor {
+  font-size: 2rem;
+  color: #2e7d32;
+  font-weight: bold;
+}

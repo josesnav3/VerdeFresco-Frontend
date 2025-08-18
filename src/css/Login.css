@@ -1,54 +1,188 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background-color: #f1f8e9;
-  }
-  
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-  }
-  
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f1f8e9;
+  min-height: 100vh;
+}
+
+/* Centrado principal */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 16px;
+}
+
+/* Tarjeta de login */
+.login-card {
+  background-color: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
+  text-align: center;
+}
+
+.login-card h2 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #66bb6a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background-color: #43a047;
+}
+
+/* Enlace registro */
+.register-link {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: #2e7d32;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mensaje de error */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Modal 2FA */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  background-color: white;
+  width: 90%;
+  max-width: 360px;
+  padding: 25px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.modal h3 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.modal button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #66bb6a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.modal button:hover {
+  background-color: #43a047;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Móvil: ajustes finos */
+@media (max-width: 400px) {
   .login-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
-    width: 100%;
-    max-width: 350px;
-    text-align: center;
+    padding: 24px 16px;
   }
-  
+
   .login-card h2 {
-    margin-bottom: 20px;
-    color: #2e7d32;
+    font-size: 20px;
+  }
+
+  .login-card input,
+  .modal input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .login-card button,
+  .modal button[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .modal-overlay {
+    display: flex !important;
+    z-index: 9999 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .modal {
+    display: block !important;
   }
   
-  .login-card input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #c8e6c9;
-    border-radius: 8px;
-    font-size: 16px;
-  }
   
-  .login-card button {
-    width: 100%;
-    padding: 12px;
-    background-color: #66bb6a;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .login-card button:hover {
-    background-color: #43a047;
-  }
-  
+}
+
+

@@ -1,0 +1,82 @@
+
+/* FormularioPersona.css */
+.formulario-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.formulario-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.campo {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.campo input,
+.campo select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.campo button {
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  background-color: #2e86de;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.campo button:hover {
+  background-color: #1b4f9c;
+}
+
+.btn-listo {
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-listo:hover {
+  background-color: #1e8449;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.datos-formulario {
+  margin-top: 2rem;
+}
+
+
+.formulario-scroll-container {
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: #eef2f5;
+}
